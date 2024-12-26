@@ -13,6 +13,10 @@ app.get('/main', (req, res) => {
   res.redirect('/');
 })
 
+app.get('/user/register', (req, res) => {
+  res.render(path.join(__dirname, 'main', 'register.ejs'));
+});
+
 app.get('/user/login', (req, res) => {
   res.render(path.join(__dirname, 'main', 'login.ejs'));
 });
