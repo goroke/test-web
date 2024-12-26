@@ -38,6 +38,11 @@ app.post('/user/loginGo', (req, res) => {
   res.send('아직 구현 안 됨!');
 });
 
+// test 는 로그인이 아직 되지 않아서 ejs 테스트용으로 올린 것이니 추후 삭제 부탁드립니다..!
+app.get('/user/test', (req, res) => {
+  res.render(path.join(__dirname, 'groupBuy', 'gbList.ejs'), { user: "TOKEN" });
+});
+
 app.listen(port, () => {
   console.log(`서버 시작`);
 });
