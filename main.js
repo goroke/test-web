@@ -13,12 +13,24 @@ app.get('/main', (req, res) => {
   res.redirect('/');
 })
 
+// 회원가입 페이지로 이동
 app.get('/user/register', (req, res) => {
   res.render(path.join(__dirname, 'main', 'register.ejs'));
 });
 
+// 로그인 페이지로 이동
 app.get('/user/login', (req, res) => {
   res.render(path.join(__dirname, 'main', 'login.ejs'));
+});
+
+// 아이디 찾기 페이지로 이동
+app.get('/user/findid', (req, res) => {
+  res.render(path.join(__dirname, 'main', 'findId.ejs'));
+});
+
+// 비밀번호 찾기 페이지로 이동
+app.get('/user/findpw', (req, res) => {
+  res.render(path.join(__dirname, 'main', 'findPw.ejs'));
 });
 
 app.post('/user/loginGo', (req, res) => {
